@@ -1,9 +1,24 @@
-import { Button } from "@chakra-ui/react";
+import { Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
 
 function App() {
+  const showAside = useBreakpointValue({ base: false, lg: true });
   return (
     <>
-      <Button colorPalette="blue">hello</Button>
+      <Grid
+        templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
+      >
+        <GridItem area="nav" bg="coral">
+          Nav
+        </GridItem>
+        {showAside && (
+          <GridItem area="aside" bg="gold">
+            Aside
+          </GridItem>
+        )}
+        <GridItem area="main" bg="dodgerblue">
+          Main
+        </GridItem>
+      </Grid>
     </>
   );
 }
