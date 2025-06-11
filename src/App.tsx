@@ -4,6 +4,7 @@ import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { useState } from "react";
 import type { Genre } from "./hooks/useGenres";
+import PlatformList from "./components/PlatformList";
 
 function App() {
   const showAside = useBreakpointValue({ base: false, lg: true });
@@ -30,6 +31,7 @@ function App() {
           </GridItem>
         )}
         <GridItem area="main">
+          <PlatformList />
           <GameGrid selectedGenre={selectedGenre} />
         </GridItem>
       </Grid>
