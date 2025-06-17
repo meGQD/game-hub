@@ -1,6 +1,7 @@
 import type { Platform } from "@/hooks/useGames";
 import usePlatforms from "@/hooks/usePlatforms";
 import { Button, Menu, Portal } from "@chakra-ui/react";
+import { BsChevronDown } from "react-icons/bs";
 
 interface Props {
   onSelectPlatform: (platform: Platform | null) => void;
@@ -17,7 +18,7 @@ const PlatformList = ({ onSelectPlatform, selectedPlatform }: Props) => {
       <Menu.Root>
         <Menu.Trigger asChild>
           <Button variant="outline" size="md">
-            {selectedPlatform?.name || "Platform"}
+            {selectedPlatform?.name || "Platform"} <BsChevronDown />
           </Button>
         </Menu.Trigger>
         <Portal>
