@@ -6,7 +6,7 @@ const ColorModeSwitch = () => {
   return (
     <div>
       <HStack>
-        <Text>Dark mode</Text>
+        <Text whiteSpace="nowrap">Dark mode</Text>
         <Switch.Root
           colorPalette="cyan"
           checked={colorMode === "dark"}
