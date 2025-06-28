@@ -51,7 +51,7 @@ function App() {
           </GridItem>
         )}
         <GridItem area="main">
-          <Box paddingLeft={"10px"}>
+          <Box padding={3}>
             <GameHeading gameQuery={gameQuery} />
             <HStack spaceX={3} marginBottom={5}>
               <PlatformList
@@ -67,8 +67,8 @@ function App() {
                 selectedSortOrder={gameQuery.sortOrder}
               />
             </HStack>
+            <GameGrid gameQuery={gameQuery} />
           </Box>
-          <GameGrid gameQuery={gameQuery} />
         </GridItem>
       </Grid>
     </>
