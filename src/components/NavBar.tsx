@@ -10,7 +10,7 @@ interface Props {
 const NavBar = ({ onSearch }: Props) => {
   return (
     <div>
-      <HStack padding="20px">
+      <HStack paddingX="20px" paddingY="10px">
         <Image src={role} boxSize="50px"></Image>
         <Container fluid>
           <SearchInput onSearch={onSearch} />
