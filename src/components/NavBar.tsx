@@ -1,7 +1,7 @@
 import { Container, HStack, Image } from "@chakra-ui/react";
-import logo from "../assets/logo.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
+import role from "../assets/role.svg";
 
 interface Props {
   onSearch: (searchText: string) => void;
@@ -10,8 +10,8 @@ interface Props {
 const NavBar = ({ onSearch }: Props) => {
   return (
     <div>
-      <HStack padding="10px">
-        <Image src={logo} boxSize="60px"></Image>
+      <HStack padding="20px">
+        <Image src={role} boxSize="50px"></Image>
         <Container fluid>
           <SearchInput onSearch={onSearch} />
         </Container>
