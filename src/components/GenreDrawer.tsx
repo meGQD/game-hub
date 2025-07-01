@@ -1,14 +1,21 @@
 import { TbBaselineDensityMedium } from "react-icons/tb";
 import { Button, CloseButton, Drawer, Portal } from "@chakra-ui/react";
 import { useState } from "react";
+import type { Genre } from "@/hooks/useGenres";
+import GenreList from "./GenreList";
 
-const GenreDrawer = () => {
+interface Props {
+  onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
+}
+
+const GenreDrawer = ({ onSelectGenre, selectedGenre }: Props) => {
   const [open, setOpen] = useState(false);
 
   return (
     <Drawer.Root open={open} onOpenChange={(e) => setOpen(e.open)}>
       <Drawer.Trigger asChild>
-        <Button variant="outline" size="sm">
+        <Button variant="outline" size="xs">
           <TbBaselineDensityMedium />
         </Button>
       </Drawer.Trigger>
@@ -17,13 +24,13 @@ const GenreDrawer = () => {
         <Drawer.Positioner>
           <Drawer.Content>
             <Drawer.Header>
-              <Drawer.Title>Genres</Drawer.Title>
+              <Drawer.Title></Drawer.Title>
             </Drawer.Header>
             <Drawer.Body>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              <GenreList
+                onSelectGenre={onSelectGenre}
+                selectedGenre={selectedGenre}
+              />
             </Drawer.Body>
             <Drawer.CloseTrigger asChild>
               <CloseButton size="sm" />

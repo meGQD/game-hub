@@ -41,6 +41,8 @@ function App() {
             onSearch={(searchText) =>
               setGameQuery({ ...gameQuery, searchText })
             }
+            selectedGenre={gameQuery.genre}
+            onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
           />
         </GridItem>
         {showAside && (
