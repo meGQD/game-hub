@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# Game Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for discovering and searching for video games, built with modern web technologies. This project allows users to browse a vast library of games, filter them by genre and platform, and sort them based on various criteria.
 
-Currently, two official plugins are available:
+**Live Demo:** [https://poetic-concha-5b8ff1.netlify.app/](https://poetic-concha-5b8ff1.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Game Discovery:** Browse and discover new and popular games.
+- **Search:** Find specific games by name.
+- **Filtering:** Filter games by genre (e.g., Action, RPG) and platform (e.g., PC, PlayStation, Xbox).
+- **Sorting:** Sort games by relevance, name, release date, rating, and popularity.
+- **Responsive Design:** A fully responsive layout that works on desktops, tablets, and mobile devices.
+- **Dark/Light Mode:** Switch between dark and light themes for comfortable viewing.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Framework:** [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **UI Library:** [Chakra UI](https://chakra-ui.com/), [React Icons](https://react-icons.github.io/react-icons/)
+- **Data Fetching:** [Axios](https://axios-http.com/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Setup and Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  **Clone the repository:**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+    ```bash
+    git clone [https://github.com/meGQD/game-hub.git](https://github.com/meGQD/game-hub.git)
+    cd game-hub
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Create a `.env` file** in the root of the project and add your RAWG API key:
+
+    ```
+    VITE_RAWG_API_KEY=your_rawg_api_key
+    VITE_BASE_URL=[https://api.rawg.io/api](https://api.rawg.io/api)
+    ```
+
+    You can generate an API_KEY via https://rawg.io/apidocs > Get API Key
+
+4.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Open your browser** and navigate to `http://localhost:5173`.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/megqd/game-hub/issues) if you'd like to contribute.
+
+## Contact
+
+[MohammadReza Karimi] - [mrk272727mrk@gmail.com]
+
+Project Link: [https://github.com/megqd/game-hub](https://github.com/megqd/game-hub)
